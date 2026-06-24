@@ -1,0 +1,41 @@
+:root {
+    --primary: #0EA5E9;
+    --secondary: #0284C7;
+    --accent: #38BDF8;
+    --text: #374151;
+    --bg: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+/* Sticky Navbar */
+.navbar {
+    position: fixed; top: 0; width: 100%; padding: 20px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255, 255, 255, 0.95); z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh; background: linear-gradient(rgba(14, 165, 233, 0.7), rgba(2, 132, 199, 0.7)), url('dental-bg.jpg');
+    background-size: cover; display: flex; align-items: center; justify-content: center;
+    text-align: center; color: white; padding: 0 20px;
+}
+
+.btn-primary {
+    background: var(--primary); color: white; padding: 12px 25px;
+    border-radius: 50px; text-decoration: none; transition: 0.3s;
+}
+
+.btn-primary:hover { background: var(--secondary); transform: scale(1.05); }
+
+/* Floating Buttons */
+.floating-btns { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; }
+.floating-btns a { width: 50px; height: 50px; background: var(--primary); color: white; 
+                   display: flex; align-items: center; justify-content: center; border-radius: 50%; 
+                   font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+}
